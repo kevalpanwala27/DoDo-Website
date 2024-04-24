@@ -8,9 +8,6 @@ Dodo-Website is a task management web application built using the MERN stack (Mo
 - [Features](#features)
 - [Installation and Setup](#installation-and-setup)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact Information](#contact-information)
 
 ## Introduction
 
