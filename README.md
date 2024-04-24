@@ -1,26 +1,34 @@
 # Dodo-Website
 
-Dodo-Website is a task management web application built using the MERN stack (MongoDB, Express, React, Node.js). This README provides an overview of the project, setup instructions, and other useful information to help you get started and contribute.
+Dodo-Website is a task management web application built using the MERN stack (MongoDB, Express, React, Node.js). This README file provides an overview of the project, setup instructions, and other useful information to help you get started and contribute.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Project Structure](#project-structure)
 - [Installation and Setup](#installation-and-setup)
 - [Usage](#usage)
 
 ## Introduction
 
-Dodo-Website is a simple and intuitive task management application. It allows users to create accounts, add tasks, edit them, delete them, and mark tasks as complete. The application aims to provide a straightforward interface for managing daily tasks.
+Dodo-Website is a simple task management application that allows users to create accounts, add tasks, edit them, delete them, and mark tasks as complete. The application aims to provide a user-friendly way to manage daily tasks.
 
 ## Features
 
 - User registration and authentication
 - Create, edit, and delete tasks
 - Mark tasks as complete
-- Simple, user-friendly interface
+- Intuitive user interface
 - Real-time task updates (if applicable)
 - Task categorization (optional)
+
+## Project Structure
+
+The project is organized as follows:
+
+- **Backend**: The main folder contains the server-side code using Node.js, Express, and MongoDB.
+- **Frontend**: The `client` folder contains the client-side code using React.
 
 ## Installation and Setup
 
@@ -39,22 +47,27 @@ git clone [your-repo-link]
 cd Dodo-Website
 ```
 
-### Install Dependencies
+### Install Backend Dependencies
 
 ```bash
 npm install
 ```
 
+### Install Frontend Dependencies
+
+```bash
+cd client
+npm install
+cd ..
+```
+
 ### Set Up Environment Variables
 
-Create a `.env` file in the root directory and add the following environment variables:
+Create a `.env` file in the main folder with the following environment variables:
 
 ```bash
 # MongoDB connection string
-MONGODB_URI=[your-mongodb-connection-string]
-
-# Application port
-PORT=[your-port, default is 3000]
+DB_URL=[your-mongodb-connection-string]
 
 # Secret key for JWT
 JWT_SECRET=[your-secret-key]
@@ -62,13 +75,20 @@ JWT_SECRET=[your-secret-key]
 
 ### Run the Application
 
-To start the development server, use the following command:
+To start the backend server with `nodemon`, use the following command:
 
 ```bash
+nodemon server.js
+```
+
+In a separate terminal, start the frontend server:
+
+```bash
+cd client
 npm start
 ```
 
-The application should be running on `http://localhost:[PORT]`. Open this URL in your browser to view the website.
+The backend should be running on `http://localhost:[PORT]`, and the frontend on `http://localhost:3000`. Open these URLs in your browser to interact with the website.
 
 ## Usage
 
@@ -78,4 +98,3 @@ Once the application is running, you can create an account and log in. After log
 - Edit existing tasks to update their content
 - Delete tasks that are no longer needed
 - Mark tasks as complete when done
-
